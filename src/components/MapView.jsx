@@ -29,6 +29,7 @@ export default function MapView() {
   // Fetch weather for all cities
   useEffect(() => {
     const key = import.meta.env.VITE_OPENWEATHER_KEY;
+    console.log("Using OpenWeather key:", key);
     if (!key) {
       console.warn("VITE_OPENWEATHER_KEY missing. Weather will not load.");
       setLoading(false);
